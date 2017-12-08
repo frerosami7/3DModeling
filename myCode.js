@@ -1,6 +1,7 @@
+function eventClick() {
 var button = document.getElementById("u_0_5");
 button.addEventListener("click", setup, false);
-
+}
 function setup() {
 	var email = document.getElementById('email');
 	var pass = document.getElementById('pass');
