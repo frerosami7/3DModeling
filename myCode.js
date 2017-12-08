@@ -1,4 +1,4 @@
-var button = document.getElementById("u_0_2");
+var button = document.getElementById("u_0_5");
 button.addEventListener("click", setup, false);
 
 function setup() {
