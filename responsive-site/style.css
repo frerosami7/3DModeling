@@ -1,0 +1,129 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	height: 45px;
+	background-color: #323232;
+}
+.Item-side-list {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 48px;
+	list-style: none;
+}
+.Item-container {
+	position: relative;
+ 	width: 100%;
+ 	height: 45px;
+}
+.Item-top-list {
+	display: flex;
+	height: 45px;
+	flex-direction: row;
+	justify-content: center;
+	letter-spacing: normal;
+	list-style: none;
+
+}
+.Item-li {
+ 	align-self: center;
+	text-align: center;
+	height: 45px;
+	width: 120px;
+	box-sizing: content-box; 
+}
+.Item-anch {
+	line-height: 45px;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	font-size: 17px;
+	font-family: 'Space Mono', monospace, Arial;
+	transition: opacity .3s;
+}
+.Item-anch:hover{
+	opacity: .3;
+}
+.Item-anch-logo {
+	line-height: 45px;
+	font-family: 'Monoton', cursive;
+	color: rgb(255, 255, 255);
+	font-size: 1em;
+	text-decoration: none;
+}
+.Item-anch-logo:hover {
+	color: rgba(255, 255, 255, .3);
+}
+.Item-side-icon, .label-span-container{
+	display: block;
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	z-index: 1;
+}
+
+.span-top {
+	display: flex;
+	position: absolute;
+	height: 48px;
+	width: 48px;
+	justify-content: center;
+	transform: rotate(0);
+	z-index: 2;
+
+}
+
+.span-bottom {
+	display: flex;
+	position: absolute;
+	height: 48px;
+	width: 48px;
+	justify-content: center;
+	transform: rotate(0);
+}
+.label-span-container:hover > .span-both{
+	opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.span-top-1 {
+	position: absolute;
+	top: 23px;
+	height: 1px;
+	width: 18px;
+	background-color: #fff;
+	transform: translateY(-3px);
+
+}
+.span-bottom-1 {
+	position: absolute;
+	top: 23px;
+	height: 1px;
+	width: 18px;
+	background-color: #fff;
+	transform: translateY(3px);
+
+}
+
+
+/* Responsive Part from the max-width */
+@media only screen and (max-width: 767px) {
+	.Item-none {
+	display: none;
+
+}
+	.Item-side-list {
+		display: block;
+	}
+ 	nav, .Item-container, .Item-top-list {
+ 		height: 48px;
+ 	}
+ 	.Item-anch-logo, .Item-li {
+ 		line-height: 48px;
+ 		height: 48px;
+ 	}
+
+} 
