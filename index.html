@@ -1,10 +1,248 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>D-host</title>
+	<title>Dhost</title>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
+<style type="text/css">
+	* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+nav {
+  display: block;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  background-color: #000; 
+  z-index: 4;
+}
+.menu {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+}
+input {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.logo-cn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  line-height: 60px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-color: #0ebeff;
+  font-family: 'Lobster', cursive;
+  font-size: 1.5em;
+  z-index: 2;
+}
+.logo {
+  color: #fff;
+}
+.logo-cn:hover {
+  font-size: 1.4em;
+  opacity: .7;
+}
+icon-cn {
+  display: none;
+}
+.item {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin:0 auto;
+  width: auto;
+  height: 60px;
+  text-align:center;
+}
+.item li {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  width: 70px;
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+  font-size: .9em;
+  font-family: 'Roboto', sans-serif;
+}
+.item li:hover {
+  background-color: rgb(14, 190, 255);
+  font-size: 1em;
+}
+.container {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+.container div{
+  display: block;
+  position: relative;
+  height: 400px;
+  width: 100%;
+  padding-top: 200px;
+  top: 0;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+#home{
+  background-color: #47cf73;
+}
+#portfolio{
+  background-color: #254686;
+}
+#about{
+  background-color: cyan;
+}
+#contact {
+  background-color: #323232;
+}
+/*responsive nav bar*/
+@media only screen and (max-width: 670px) {
+  .menu {
+    background-color: #000;
+    z-index: 2;
+  }
+  .icon-cn {
+    display: block; 
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    margin:0 auto;
+    cursor: pointer;
+  }
+  input {
+    display: none;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+  }
+  .icon {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #0ebeff;
+  }
+  .top, .bottom {
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    left: 11px;
+    top: 19px;
+    background-color: #000;
+  }
+  .top {transform: translateY(-3px);}
+  .bottom {transform: translateY(3px);}
+  
+  .item {
+    display: block;
+    top: -300px;
+    height: 300px;
+    width: 100%;
+    background-color: rgba(14, 190, 255, .4);
+    z-index: 1;
+  }
+  .item li {
+    display: block;
+    top: 60px;
+    width: 100%;
+    color: #000;
+  }
+  .item-res {top: 0; transition: top .6s linear;}
+  .top-res{transform: rotate(45deg);}
+  .bottom-res{transform: rotate(-45deg);}
+}
+@media only screen and (max-width: 300px) {
+  body, nav {
+    min-width: 300px;
+  }
+}
+</style>
 </head>
 <body>
-<h3>Model like a professional</h3>
-<p>This is a short topic about how i can use different ways<br/>so this will help!</p>
+	<nav>
+  <div class="menu">
+    <label class="logo-cn">
+      <a href="#home"><span class="logo">LoGo</span></a>
+    </label>
+    <label class="icon-cn">
+      <input id="check" type="checkbox" onclick="openClose()">
+      <span class="icon">
+        <span class="top" id="top-res"></span>
+        <span class="bottom" id="bottom-res"></span>
+      </span>
+    </label>
+  </div>
+  <ul class="item" id="item-res">
+    <a href="#home"><li class="home">Home</li></a>
+    <a href="#portfolio"><li class="portfolio">Portfolio</li></a>
+    <a href="#about"><li class="about">About</li></a>
+    <a href="#contact"><li class="contact">Contact</li></a>
+  </ul>
+</nav>
+<div class="container">
+  <div id="home">
+    <h1>HOME</h1>
+    <p>Welcome to the home page.</p>
+  </div>
+  <div id="portfolio">
+    <h1>PORTFOLIO</h1>
+    <p>Portfolio where we presente our work.</p>
+  </div>
+  <div id="about">
+    <h1>ABOUT</h1>
+    <p>We tell you about us and our experience.</p>
+  </div>
+  <div id="contact">
+    <h1>CONTACT</h1>
+    <p>You can contact me from here.</p>
+  </div>
+</div>
+<script type="text/javascript">
+	window.addEventListener('resize', check);
+function check() {
+  var input = document.getElementById("check");
+  if (input.checked === true && innerWidth > 670) {
+    input.checked = false;
+    openClose();
+  }
+}
+function openClose() {
+  var item = document.getElementById("item-res");
+  var top = document.getElementById("top-res");
+  var bottom = document.getElementById("bottom-res");
+  item.classList.toggle("item-res");
+  top.classList.toggle("top-res");
+  bottom.classList.toggle("bottom-res");
+}
+</script>
 </body>
 </html>
