@@ -1,24 +1,24 @@
-{
-"description":"Hard module i will study tonight practicing json."
-"modul":[
-"Math 4",
-"Onde et vibration",
-"Math3",
-"Electronic 1",
-"Electrotechnique 1"
-]
-"funny video":[
-"Mourad Oudia",
-"Chemsou dz joker",
-"Zanga Crayzi Official",
-"Fouad Ben",
-"Youcef Zarouta"
-]
-"Music":[
-"Attention",
-"Say something",
-"See you again",
-"Alors en dance",
-"Feel it"
-]
+{  
+   "description":"Hard module i will study tonight practicing json.",
+   "modul":[  
+      "Math 4",
+      "Onde et vibration",
+      "Math3",
+      "Electronic 1",
+      "Electrotechnique 1"
+   ],
+   "funny video":[  
+      "Mourad Oudia",
+      "Chemsou dz joker",
+      "Zanga Crayzi Official",
+      "Fouad Ben",
+      "Youcef Zarouta"
+   ],
+   "Music":[  
+      "Attention",
+      "Say something",
+      "See you again",
+      "Alors en dance",
+      "Feel it"
+   ]
 }
